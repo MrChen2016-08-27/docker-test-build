@@ -626,7 +626,7 @@
 # unicorn['worker_timeout'] = 60
 ###! Minimum worker_processes is 2 at this moment
 ###! See https://gitlab.com/gitlab-org/gitlab-ce/issues/18771
-# unicorn['worker_processes'] = 2
+unicorn['worker_processes'] = 2
 
 ### Advanced settings
 # unicorn['listen'] = 'localhost'
@@ -698,7 +698,7 @@
 # postgresql['data_dir'] = "/var/opt/gitlab/postgresql/data"
 
 ##! **recommend value is 1/4 of total RAM, up to 14GB.**
-# postgresql['shared_buffers'] = "256MB"
+postgresql['shared_buffers'] = "128MB"
 
 ### Advanced settings
 # postgresql['ha'] = false
@@ -768,7 +768,7 @@
 # postgresql['statement_timeout'] = "60000"
 # postgresql['idle_in_transaction_session_timeout'] = "60000"
 # postgresql['log_line_prefix'] = "%a"
-# postgresql['max_worker_processes'] = 8
+postgresql['max_worker_processes'] = 6
 # postgresql['max_parallel_workers_per_gather'] = 0
 # postgresql['log_lock_waits'] = 1
 # postgresql['deadlock_timeout'] = '5s'
